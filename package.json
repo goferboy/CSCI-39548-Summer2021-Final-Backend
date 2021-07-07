@@ -1,24 +1,22 @@
 {
-  "name": "final-backend",
+  "name": "starter-server",
   "version": "1.0.0",
-  "description": "## Deployment link:",
-  "main": "server.js",
-  "dependencies": {
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "sequelize": "^6.6.4"
-  },
+  "description": "backend app for webdevsp21 final",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/goferboy/CSCI-39548-Summer2021-Final-Backend.git"
+  "author": "Your Name Here",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "pg": "^8.5.1",
+    "pgtools": "^0.3.0",
+    "sequelize": "^6.3.5"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/goferboy/CSCI-39548-Summer2021-Final-Backend/issues"
-  },
-  "homepage": "https://github.com/goferboy/CSCI-39548-Summer2021-Final-Backend#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }

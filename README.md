@@ -1,12 +1,9 @@
-# CSCI-39548 - Summer 2021 - Final Project - Frontend
+# starter-server
 
-## Deployment link: 
+Starter code for the backend of our final CRUD app
 
-## Group Members
-- ### Henry Baum - Github: [goferboy](https://github.com/goferboy)
+To start:
 
-## Assignment Details
-Create a banking app in react that allows a user to:
+`npm run dev`
 
-
-## Technologies Used
+Download Postgres and Postman. 
