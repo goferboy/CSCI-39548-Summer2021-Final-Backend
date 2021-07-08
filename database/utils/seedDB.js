@@ -17,22 +17,27 @@ const seedDB = async () => {
 	const dummy_student = await Student.create({
 		firstname: "Joe",
       	lastname: "Shmo",
+		email: "jojo@jimjim.com",
+		imageURL: "https://cpb-us-w2.wpmucdn.com/portfolio.newschool.edu/dist/2/485/files/2014/08/DSC_1004-2-1a1yqd6.jpg",
+		gpa: 3.1
 	});
 
 	const dummy_student2 = await Student.create({
 		firstname: "Amy",
       	lastname: "Blah",
+		email: "person@time.edu",
+		imageURL: "https://images2.penguinrandomhouse.com/author/2240565",
+		gpa: 2.9
 	});
 
 	const dummy_student3 = await Student.create({
 		firstname: "Pockey",
       	lastname: "Hockey",
+		email: "nothing@here.org"
 	});
 
 	await dummy_student.setCampus(dummy_campus);
-	await dummy_student2.setCampus(dummy_campus2);
-	await dummy_student3.setCampus(dummy_campus);
-	
+	await dummy_student2.setCampus(dummy_campus2);	
 }
 
 module.exports = seedDB;
