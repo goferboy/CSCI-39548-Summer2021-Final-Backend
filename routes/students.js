@@ -5,26 +5,6 @@ const { Student, Campus } = require('../database/models');
 //so we don't have to use try-catch for each request handler
 const ash = require('express-async-handler');
 
-/** GET ALL STUDENTS: then/catch */
-// router.get('/', function(req, res, next) {
-//   Student.findAll({include: [Campus]})
-//     .then(students => res.status(200).json(students))
-//     .catch(err => next(err));
-// });
-
-/** GET ALL STUDENTS: async/await */
-// router.get('/', async (req, res, next) => {
-//   try {
-//     let students = await Student.findAll({include: [Campus]});
-//     res.status(200).json(students);
-//   } catch(err) {
-//     next(err);
-//   }
-// });
-
-/** GET ALL STUDENTS: express-async-handler (ash) */
-// automatically catches any error and sends to middleware
-// same as using try/catch and calling next(error)
 router.get('/', ash(async(req, res) => {
   let students = await Student.findAll({
     include: [Campus],
@@ -65,9 +45,12 @@ router.delete('/:id', function(req, res, next) {
 /******************* EDIT *********************/
 
 router.put('/:id', ash(async(req, res) => {
+  //Puts "" to null values for imageURL to allow default value
+  //be constructed.
   if (req.body.imageURL === "")
     req.body.imageURL = "https://cdn.onlinewebfonts.com/svg/img_210318.png";
-  if (req.body.gpa === "")
+  //Puts "" to null values for GPA, to not fail a validation check
+    if (req.body.gpa === "")
     req.body.gpa = null;
   await Student.update(req.body,
         { where: {id: req.params.id} }

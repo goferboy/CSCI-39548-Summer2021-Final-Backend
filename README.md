@@ -1,9 +1,17 @@
-# starter-server
+# CSCI-39548 - Summer 2021 - Final Project - Backend
 
-Starter code for the backend of our final CRUD app
+## Group Members
+- ### Henry Baum - Github: [goferboy](https://github.com/goferboy)
 
-To start:
+## Assignment Details
+Using Node, Express, React, Redux, PostgreSQL, and Sequelize, build a RESTful full-stack web application to manage students and campuses.
 
-`npm run dev`
+This repository contains the server/API side, which performs the following functions:
+- Stores student and campus data in a SQL relational database
+- Provides API paths to retrieve, edit, create, and delete entries
 
-Download Postgres and Postman. 
+Project was provided with starter code, which can be found here:
+[https://github.com/mtlynch3/starter-server](https://github.com/mtlynch3/starter-server)
+
+The backend/server repo for the project can be found here:
+[https://github.com/goferboy/CSCI-39548-Summer2021-Final-Frontend](https://github.com/goferboy/CSCI-39548-Summer2021-Final-Frontend)

@@ -38,6 +38,8 @@ router.post('/', ash(async(req, res) => {
 
 // Edit Campus
 router.put('/:id', ash(async(req, res) => {
+  //Puts "" to null values for imageURL to allow default value
+  //be constructed.
   if (req.body.imageURL === "")
     req.body.imageURL = "https://cdn.onlinewebfonts.com/svg/img_379742.png";
   await Campus.update(req.body, {
