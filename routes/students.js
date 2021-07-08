@@ -65,6 +65,10 @@ router.delete('/:id', function(req, res, next) {
 /******************* EDIT *********************/
 
 router.put('/:id', ash(async(req, res) => {
+  if (req.body.imageURL === "")
+    req.body.imageURL = "https://cdn.onlinewebfonts.com/svg/img_210318.png";
+  if (req.body.gpa === "")
+    req.body.gpa = null;
   await Student.update(req.body,
         { where: {id: req.params.id} }
   );
